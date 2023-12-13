@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<center>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>COLOUR</th>
+            <th>PRICE</th>
+            <th>DELETE</th>
+            <th>UPDATE</th>
+        </tr>
+
+        {% for i in files %}
+        <tr>
+            <td>{{i.id}}</td>
+            <td>{{i.name}}</td>
+            <td>{{i.colour}}</td>
+            <td>{{i.price}}</td>
+            <td><a href="http://127.0.0.1:8000/olx/del/{{i.id}}">DELETE</a></td>
+            <td><a href="http://127.0.0.1:8000/olx/ed/{{i.id}}">UPDATE</a></td>
+        </tr>
+        {% endfor %}
+
+</body>
+</html>
